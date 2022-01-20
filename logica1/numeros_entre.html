@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    var numero = 30;
+    var numeroFinal = 40;
+
+    while (numero <= numeroFinal) {
+        if (numero == 33) {
+            numero++;
+        } else if (numero == 37) {
+            numero++;
+        } else {
+            mostra(numero);
+            numero++;
+        }
+    }
+
+    mostra("FIM!");
+
+</script>

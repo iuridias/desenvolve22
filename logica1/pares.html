@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    var numeroInicial = 2;
+
+    while (numeroInicial <= 100) {
+        mostra("O número é par: " + numeroInicial);
+        numeroInicial += 2;
+    }
+
+    mostra("FIM!");
+
+</script>

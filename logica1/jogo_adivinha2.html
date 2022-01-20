@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(texto){
+        document.write(texto);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var numeroMaximo = parseInt(prompt("Digite o número máximo que pode ser sorteado:"));
+    var numeroSecreto = sorteia(numeroMaximo);
+    console.log(numeroSecreto);
+
+    var numeroChutado = parseInt(prompt("Digite agora o seu chute:"));
+
+    if (numeroChutado == numeroSecreto) {
+        mostra("Parabéns, você acertou!! Meu número sorteado foi " + numeroSecreto);
+    } else if (numeroChutado < numeroSecreto) {
+        mostra("Você errou! Meu número secreto é maior que seu número chutado!<br>Seu número chutado foi: " + numeroChutado + ". Meu número sorteado era: " + numeroSecreto);
+    } else {
+        mostra("Você errou! Meu número secreto é menor que seu número chutado!<br>Seu número chutado foi: " + numeroChutado + ". Meu número sorteado era: " + numeroSecreto);
+    }
+
+</script>

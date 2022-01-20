@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(texto){
+        document.write(texto);
+        pulaLinha();
+    }
+
+    var numeroSecreto = Math.round(Math.random() * 10);
+    var numeroChutado = parseInt(prompt("Digite seu chute (entre 0 e 10):"));
+
+    if (numeroChutado == numeroSecreto) {
+        mostra("Você acertou!!");
+    } else {
+        mostra("Você errou! O número secreto era " + numeroSecreto);
+    }
+
+
+</script>

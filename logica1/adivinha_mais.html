@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Descubra meu segredo!</button>
+
+<script>
+    function adivinha(){
+        if (input.value == numeroSecreto) {
+            alert("Você ACERTOU!");
+        } else {
+            alert("Você ERROU!");
+        }
+        input.value = "";
+        input.focus();
+    }
+
+    var numeroSecreto = Math.round(Math.random() * 10);
+    var input = document.querySelector("input");
+    input.focus();
+
+    var button = document.querySelector("button");
+
+    button.onclick = adivinha;
+
+
+</script>

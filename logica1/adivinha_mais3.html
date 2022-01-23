@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Descubra meu segredo!</button>
+
+<script>
+    function adivinha() {
+        var acertou = false;
+        for (var posicao = 0; posicao < segredos.length; posicao++) {
+            if (input.value == segredos[posicao]) {
+                alert("VOCÊ ACERTOU!");
+                acertou = true;
+                break;
+            }
+        }
+        if (acertou == false) {
+            alert("VOCÊ ERROU!");
+            input.value = "";
+            input.focus();
+        }
+
+    }
+    function sorteia() {
+        return Math.round(Math.random() * 10);
+    }
+    function sorteiaNumeros(quantidade) {
+        var segredos = [];
+        var contador = 1;
+        while (contador <= quantidade) {
+            var numeroSorteado = sorteia();
+            if (numeroSorteado !== 0) {
+                var achou = false;
+
+                for (i = 0; i < segredos.length; i++) {
+                    if (numeroSorteado == segredos[i]) {
+                        achou = true;
+                        break;
+                    }
+                }
+                if (achou == false) {
+                    segredos.push(numeroSorteado);
+                    contador++;
+                }
+            }
+        }
+        return segredos;
+    }
+
+
+    var segredos = sorteiaNumeros(5);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    //var numeroSecreto = Math.round(Math.random() * 10);
+
+    var button = document.querySelector("button");
+
+    button.onclick = adivinha;
+
+
+</script>
